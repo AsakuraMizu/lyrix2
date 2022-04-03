@@ -1,9 +1,14 @@
 FROM gitpod/workspace-full-vnc
 
-RUN echo 'keyboard-configuration keyboard-configuration/layout select English (US)' | sudo debconf-set-selections && \
-    echo 'keyboard-configuration keyboard-configuration/variant select English (US)' | sudo debconf-set-selections && \
-    sudo apt update && \
-    sudo apt install -y libwebkit2gtk-4.0-37
+USER root
+
+RUN echo 'keyboard-configuration keyboard-configuration/layout select English (US)' | debconf-set-selections && \
+    echo 'keyboard-configuration keyboard-configuration/variant select English (US)' | debconf-set-selections && \
+    apt update && \
+    apt install -y libwebkit2gtk-4.0-37 && \
+    apt clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+
+USER gitpod
 
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh && \
     /home/gitpod/.deno/bin/deno completions bash > /home/gitpod/.bashrc.d/90-deno && \
