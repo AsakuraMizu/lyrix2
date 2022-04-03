@@ -2,10 +2,8 @@ FROM gitpod/workspace-full-vnc
 
 USER root
 
-RUN echo 'keyboard-configuration keyboard-configuration/layout select English (US)' | debconf-set-selections && \
-    echo 'keyboard-configuration keyboard-configuration/variant select English (US)' | debconf-set-selections && \
-    apt update && \
-    apt install -y libwebkit2gtk-4.0-37 && \
+RUN apt update && \
+    apt install -y --no-install-recommends libwebkit2gtk-4.0-37 && \
     apt clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 USER gitpod
