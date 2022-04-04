@@ -1,0 +1,50 @@
+{
+  "name": "lyrix2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Lyrics search & display",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsakuraMizu/lyrix.git"
+  },
+  "author": "Asakura Mizu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AsakuraMizu/lyrix2/issues"
+  },
+  "homepage": "https://github.com/AsakuraMizu/lyrix2#readme",
+  "scripts": {
+    "vite:dev": "vite",
+    "vite:build": "vite build",
+    "vite:preview": "vite preview",
+    "lint": "eslint . --ext js,ts,svelte,cjs,mjs",
+    "lint:fix": "eslint . --ext js,ts,svelte,cjs,mjs --fix",
+    "pret": "prettier **/*.{js,ts,svelte,yml,json,cjs,mjs,html} -c",
+    "pret:fix": "prettier **/*.{js,ts,svelte,yml,json,cjs,mjs,html} -w",
+    "typecheck": "tsc --noEmit && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@roxi/routify": "next",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.12.0",
+    "eslint-plugin-svelte3": "^3.4.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "postcss-load-config": "^3.1.4",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.6.0",
+    "svelte": "^3.46.6",
+    "svelte-check": "^2.4.6",
+    "svelte-preprocess": "^4.10.4",
+    "tailwindcss": "^3.0.23",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.1"
+  }
+}
