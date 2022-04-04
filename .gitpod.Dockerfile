@@ -9,3 +9,5 @@ RUN sudo apt update && \
     librsvg2-dev && \
     sudo apt clean && \
     sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
+
+RUN cargo install tauri-cli --locked --version ^1.0.0-rc
