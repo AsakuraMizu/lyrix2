@@ -6,7 +6,7 @@
   "description": "Lyrics search & display",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AsakuraMizu/lyrix.git"
+    "url": "git+https://github.com/AsakuraMizu/lyrix2.git"
   },
   "author": "Asakura Mizu",
   "license": "MIT",
@@ -22,12 +22,17 @@
     "lint:fix": "eslint . --ext js,ts,svelte,cjs,mjs --fix",
     "pret": "prettier **/*.{js,ts,svelte,yml,json,cjs,mjs,html} -c",
     "pret:fix": "prettier **/*.{js,ts,svelte,yml,json,cjs,mjs,html} -w",
-    "typecheck": "tsc --noEmit && svelte-check --tsconfig ./tsconfig.json"
+    "typecheck": "tsc --noEmit && svelte-check --tsconfig ./tsconfig.json",
+    "tauri:dev": "cargo tauri dev",
+    "tauri:build": "cargo tauri build",
+    "dev": "run-p vite:dev tauri:dev",
+    "build": "run-s vite:build tauri:build"
   },
   "devDependencies": {
     "@roxi/routify": "next",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
     "@tailwindcss/forms": "^0.5.0",
+    "@tauri-apps/api": "^1.0.0-beta.8",
     "@tsconfig/svelte": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",

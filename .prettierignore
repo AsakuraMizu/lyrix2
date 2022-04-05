@@ -2,3 +2,4 @@
 .routify
 node_modules
 dist
+src-tauri
