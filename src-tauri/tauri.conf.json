@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "LyriX2",
+    "productName": "lyrix2",
     "version": "0.1.0"
   },
   "build": {
@@ -49,7 +49,10 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "all": true,
+      "http": {
+        "scope": ["http://*.kugou.com/*"]
+      }
     },
     "windows": [
       {
