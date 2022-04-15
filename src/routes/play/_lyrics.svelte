@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterUpdate, onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import { Lrc, Runner } from 'lrc-kit';
   import clsx from 'clsx';
   import { duration, ms, ops } from '../../stores/music';
@@ -21,13 +21,10 @@
     if (curIndex !== preIndex) {
       preIndex = curIndex;
     }
-  }
-
-  afterUpdate(() => {
     if (preIndex !== -1)
       el[preIndex]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     else placeholder?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
+  }
 
   onMount(() => {
     placeholder.scrollIntoView({ behavior: 'smooth', block: 'center' });

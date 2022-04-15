@@ -38,7 +38,7 @@ export default class KugouProvider implements Provider {
           {
             params: {
               format: 'json',
-              keyword: keyword,
+              keyword,
               page,
               pagesize: 30,
             },
