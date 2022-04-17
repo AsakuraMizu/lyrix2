@@ -46,7 +46,7 @@
 
 <div class="w-full md:w-3/5 max-w-4xl mt-5 px-3 pb-8">
   <div class="rounded-lg bg-white ring-1 ring-black ring-opacity-5">
-    <div class="p-4 bg-amber-50">搜索结果：{keyword}（{provider.name}）</div>
+    <div class="p-4 bg-amber-50">搜索结果：{keyword} ({provider.name})</div>
     <div class="grid p-3 gap-6">
       {#each results as r}
         <div

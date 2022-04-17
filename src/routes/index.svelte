@@ -68,7 +68,7 @@
   <div class="grid p-3 gap-6">
     {#each $entries.sort((a, b) => b.time - a.time) as e}
       <div
-        class="flex justify-between p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200 border-b overflow-hidden"
+        class="relative p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200 border-b overflow-hidden"
         on:click={() =>
           $goto('/play', {
             providerIdx: e.provider.toString(),
@@ -76,10 +76,15 @@
           })}
       >
         <div class="space-y-2">
-          <div class="text-lg truncate">{e.name}</div>
+          <div class="text-lg truncate">
+            {e.name}
+            <span class="text-amber-700">({providers[e.provider].name})</span>
+          </div>
           <div class="text-gray-400 truncate">{e.artist} - {e.album}</div>
         </div>
-        <div>{dayjs.unix(e.time).locale('zh-cn').fromNow()}</div>
+        <div class="absolute top-0 right-0 p-3">
+          {dayjs.unix(e.time).locale('zh-cn').fromNow()}
+        </div>
       </div>
     {/each}
   </div>
