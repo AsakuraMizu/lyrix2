@@ -54,7 +54,7 @@
     "allowlist": {
       "all": true,
       "http": {
-        "scope": ["http://*.kugou.com/*", "http://music.163.com/api/*"]
+        "scope": ["http://*.kugou.com/*", "http://music.163.com/api/*", "http://c.y.qq.com/*"]
       }
     },
     "windows": [
