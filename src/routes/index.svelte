@@ -30,7 +30,7 @@
         <Icon width="24" icon={selector} class="text-gray-400" />
       </ListboxButton>
       <ListboxOptions
-        class="absolute max-h-60 overflow-auto rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
+        class="absolute max-h-60 overflow-auto rounded-md shadow-lg z-10 ring-1 ring-black ring-opacity-5"
       >
         {#each providers as provider, i}
           <ListboxOption

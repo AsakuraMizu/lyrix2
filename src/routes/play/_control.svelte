@@ -4,6 +4,7 @@
   import play from '@iconify/icons-heroicons-outline/play';
   import pause from '@iconify/icons-heroicons-outline/pause';
   import { duration, ms, ops, playing, progress } from '../../stores/music';
+  import { onMount } from 'svelte';
 
   const onWheel = (e: WheelEvent) => {
     e.stopPropagation();
@@ -25,6 +26,11 @@
   function formatTime(ms: number): string {
     return dayjs.duration(Math.round(ms), 'ms').format('mm:ss');
   }
+
+  onMount(() => () => {
+    ops.pause();
+    ops.seek(0);
+  });
 </script>
 
 <div class="w-full md:w-[768px] flex items-center gap-3">
