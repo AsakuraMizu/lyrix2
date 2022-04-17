@@ -20,10 +20,10 @@
     let curIndex = runner.curIndex();
     if (curIndex !== preIndex) {
       preIndex = curIndex;
+      if (curIndex !== -1)
+        el[curIndex]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      else placeholder?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    if (preIndex !== -1)
-      el[preIndex]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    else placeholder?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   onMount(() => {
