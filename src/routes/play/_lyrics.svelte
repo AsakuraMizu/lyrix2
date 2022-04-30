@@ -44,7 +44,7 @@
       on:click={() => ops.seek(l.timestamp * 1000)}
       class={clsx(
         'snap-center transition-colors duration-1000 cursor-pointer',
-        preIndex === i ? 'text-amber-600 underline' : 'text-stone-400'
+        preIndex === i ? 'text-black underline' : 'text-stone-400'
       )}
       style={`
         line-height: 1;
