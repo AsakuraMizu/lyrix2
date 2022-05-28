@@ -33,7 +33,7 @@
       { provider: providerIdx, ref: r.ref },
       {
         name: r.name,
-        artist: r.name,
+        artist: r.artist,
         album: r.album,
       }
     );

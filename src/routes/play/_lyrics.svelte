@@ -35,7 +35,7 @@
 </script>
 
 <div
-  class="h-[calc(100vh-100px)] overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-amber-500 scrollbar-track-gray-200 snap-y text-center select-none"
+  class="h-[calc(100vh-100px)] overflow-y-auto scrollbar-none snap-y text-center select-none"
 >
   <div bind:this={placeholder} class="snap-center mt-[50%]" />
   {#each lyrics as l, i}
